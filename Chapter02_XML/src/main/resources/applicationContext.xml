@@ -68,7 +68,7 @@
     <util:list id="arrayList" list-class="java.util.ArrayList"></util:list>
 
     <!--    sample05-->
-    <!--라이프 사이클 중요-->
+    <!--라이프 사이클 중요 (하나도 모르겠움)-->
     <bean id="messageBeanImpl2" class="sample05.MessageBeanImpl">
         <constructor-arg value="홍길동"></constructor-arg>
         <property name="phone" value="010-1234-5678"></property>
@@ -77,5 +77,6 @@
     <bean id="fileOutputter" class="sample05.FileOutputter">
     <property name="filePath" value="E:/Spring/"></property>
     <property name="fileName" value="result.txt"></property>
+
 </bean>
 </beans>
