@@ -1,13 +1,25 @@
 package sample04;
 
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Scanner;
 
+@Component
 public class SungJukUpdate implements SungJuk {
 
-    @Setter
+/*
+
+    public void setList(List<SungJukDTO2> list) {
+        this.list = list;
+    }
+*/
+
+    @Autowired
+    @Qualifier("arrayList")
     private List<SungJukDTO2> list;
 
     @Override

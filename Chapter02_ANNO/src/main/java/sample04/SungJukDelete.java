@@ -1,14 +1,19 @@
 package sample04;
 
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
+@Component
 public class SungJukDelete implements SungJuk {
 
-	@Setter
+	@Autowired
+	@Qualifier("arrayList")
 	private List<SungJukDTO2> list;
 
 	@Override
@@ -31,7 +36,7 @@ public class SungJukDelete implements SungJuk {
 
 			if (sungJukDTO2.getName().equals(name)) {
 				sw=1;
-				it.remove(); // it.next()로 꺼내서 저장한 항목을 제거한다 ???
+				it.remove(); // it.next()로 꺼내서 저장한 항목을 제거한다 ??? 
 				System.out.println(name+"님의 데이터를 삭제");
 
 				break;

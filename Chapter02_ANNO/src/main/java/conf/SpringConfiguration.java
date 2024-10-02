@@ -5,6 +5,10 @@ import org.springframework.context.annotation.Configuration;
 import sample01.MessageBeanImpl;
 import sample02.CalcAdd;
 import sample02.CalcMul;
+import sample04.SungJukDTO2;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Configuration
 public class SpringConfiguration {
@@ -29,6 +33,11 @@ public class SpringConfiguration {
         return new CalcMul();
     }
 
+    //sample04
+    @Bean
+    public List<SungJukDTO2> arrayList(){
+        return new ArrayList<SungJukDTO2>();
+    }
 }
 
 /*

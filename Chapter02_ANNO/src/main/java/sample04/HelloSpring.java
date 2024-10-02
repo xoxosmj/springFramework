@@ -2,9 +2,11 @@ package sample04;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
 import java.util.Scanner;
 
+@Component
 public class HelloSpring {
 
 	public void menu(ApplicationContext context) {
@@ -19,6 +21,7 @@ public class HelloSpring {
 			System.out.println("3.성적 수정");
 			System.out.println("4.성적 삭제");
 			System.out.println("5.종료");
+
 			
 			num=scan.nextInt();
 			
@@ -27,6 +30,10 @@ public class HelloSpring {
 			else if (num==2) sungJuk = (SungJuk) context.getBean("sungJukOutput");
 			else if (num==3) sungJuk = (SungJuk) context.getBean("sungJukUpdate");
 			else if (num==4) sungJuk = (SungJuk) context.getBean("sungJukDelete");
+			else {
+				System.out.println("올바른 번호를 입력하세요");
+				continue;
+			}
 
 
 			sungJuk.execute();

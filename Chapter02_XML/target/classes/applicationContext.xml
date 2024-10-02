@@ -51,11 +51,20 @@
         <property name="list" ref="arrayList"></property>
     </bean>
 
+    <bean id="sungJukUpdate" class="sample04.SungJukUpdate">
+        <property name="list" ref="arrayList"></property>
+    </bean>
+
+    <bean id="sungJukDelete" class="sample04.SungJukDelete">
+        <property name="list" ref="arrayList"></property>
+    </bean>
+
     <bean id="sungJukDTO2" class="sample04.SungJukDTO2" scope="prototype"></bean>
 
 <!--
     <bean id="arrayList" class="java.util.ArrayList"></bean>
 -->
+
     <util:list id="arrayList" list-class="java.util.ArrayList"></util:list>
 
 </beans>
